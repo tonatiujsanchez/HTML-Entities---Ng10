@@ -1,0 +1,7 @@
+{
+    "/convert?url=/*": {
+        "target":"https://feed2json.org",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

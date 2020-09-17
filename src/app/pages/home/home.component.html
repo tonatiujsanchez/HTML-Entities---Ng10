@@ -1,0 +1,14 @@
+  <div *ngIf="items.length > 0" class="row row-cols-1 row-cols-md-3">
+    <div *ngFor="let item of items" class="col mb-4">
+      <div class="card h-100">
+        <img [src]="item.banner_image" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text"><small class="text-muted">{{ item.tags }} | {{ item.date_published | date }}</small></p>
+            <p class="card-text" [innerHtml]="item.description | safeHtml"></p>
+            <!-- <p class="card-text" [innerHtml]="item.content_html | safeHtml"></p> -->
+            <button class="btn btn-outline-success">Ver nota completa</button>
+        </div>
+      </div>
+    </div>
+  </div>
